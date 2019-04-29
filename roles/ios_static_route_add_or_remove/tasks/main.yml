@@ -1,0 +1,7 @@
+---
+- name: configure static route
+  ios_static_route:
+    prefix: "{{ ip_prefix }}"
+    mask: "{{ ip_mask }}"
+    next_hop: "{{ ip_next_hop }}"
+    state: "{{ ip_state }}"
