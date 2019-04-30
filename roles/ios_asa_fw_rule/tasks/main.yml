@@ -1,10 +1,6 @@
 ---
 - asa_acl:
     lines:
-      - access-list ACL-ANSIBLE extended permit tcp any any eq 82
-      - access-list ACL-ANSIBLE extended permit tcp any any eq www
-      - access-list ACL-ANSIBLE extended permit tcp any any eq 97
-      - access-list ACL-ANSIBLE extended permit tcp any any eq 98
-      - access-list ACL-ANSIBLE extended permit tcp any any eq 99
+      - 'access-list {{ acl_list_name }} extended permit tcp any any eq {{ service }}'
     match: strict
-    replace: block
+    replace: line
