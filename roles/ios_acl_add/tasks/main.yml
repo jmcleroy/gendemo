@@ -2,5 +2,5 @@
 - name: Add ACL
   ios_config:
     lines:
-      - '"{{ sequence_number }}" permit ip host "{{ host_ip }}" any log'
+      - 'permit ip host "{{ host_ip }}" any log'
     parents: 'ip access-list extended "{{ acl_name }}"'
